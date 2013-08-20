@@ -1,0 +1,5 @@
+
+numbers[0]|§|70
+numbers[1]|§|150
+numbers[2]|§|30
+sampleData|§|OFF

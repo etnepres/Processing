@@ -56,7 +56,7 @@ class DataEt {
       stringSave =  stringSave +"| |"+name+"["+i+"]"+"|§|"+val[i];
     }
   }  
-  
+
   void endSave(String _filename) {
     filename=_filename;
 
@@ -90,7 +90,11 @@ class DataEt {
   String readString(String s) {
     return datalist.get(s);
   }
- float[] readArrayFloat(String s, int size) {
+  float[] readArrayFloat(String s) {
+    int size = 1;
+    while (datalist.get (s+"["+size+"]") != null) {
+      size++;
+    }
     float[] r = new float[size];
     for (int i=0; i<size; i++) {
       r[i] = float(datalist.get(s+"["+i+"]"));
@@ -98,15 +102,24 @@ class DataEt {
     return r;
   }
 
-  int[]  readArrayInt(String s, int size) {
+  int[]  readArrayInt(String s) {
+    int size = 1;
+    while (datalist.get (s+"["+size+"]") != null) {
+      size++;
+    }
     int[] r = new int[size];
+
     for (int i=0; i<size; i++) {
       r[i] = int(datalist.get(s+"["+i+"]"));
     }
     return r;
   }
 
-  boolean[] readArrayBoolean(String s, int size) {
+  boolean[] readArrayBoolean(String s) {
+    int size = 1;
+    while (datalist.get (s+"["+size+"]") != null) {
+      size++;
+    }
     boolean[] r = new boolean[size];
     for (int i=0; i<size; i++) {
       r[i] =boolean(datalist.get(s+"["+i+"]"));
@@ -114,8 +127,13 @@ class DataEt {
     return r;
   }
 
-  String[] readArrayString(String s, int size) {
+  String[] readArrayString(String s) {
+    int size = 1;
+    while (datalist.get (s+"["+size+"]") != null) {
+      size++;
+    }
     String[] r = new String[size];
+
     for (int i=0; i<size; i++) {
       r[i] = datalist.get(s+"["+i+"]");
     }

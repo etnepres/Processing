@@ -62,7 +62,7 @@ void loadDataSample() {
     //readString readBoolean readFloat readInt !!!!
     sampleData = data.readString("sampleData");
     //readArrayInt readArrayFloat readArrayString readArrayBoolean
-    numbers = data.readArrayInt("numbers", numbers.length); //Reading a Array of Ints (Name, lenght)
+    numbers = data.readArrayInt("numbers"); 
   }    
   catch(Exception e) {
   }

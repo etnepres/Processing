@@ -26,11 +26,19 @@ void draw() {
 }
 
 //Function to calculate right size
-int calculateHeight(int size) {
-  return size*(height/buildHeight);
+public int calculateHeight(int size) {
+  int prev = size*(height/buildHeight);
+  if(prev == 0){
+    prev = size;
+  }
+  return size;
 }
-int  calculateWidth(int size) {
-  return size*(width/buildWidth);
+public int  calculateWidth(int size) {
+  int prev = size*(width/buildWidth);
+  if(prev == 0){
+    prev = size;
+  }
+  return size;
 }
 
 void calculateDifferences() {
